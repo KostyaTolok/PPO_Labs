@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="buttonRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="buttonDigit">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:onClick">onDigit</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="buttonOperator">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:onClick">onOperator</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="buttonDecimal">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:onClick">onDecimalPoint</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="buttonEqual">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:onClick">onEqual</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="buttonClear">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:onClick">onClear</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="buttonEraseOne">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:onClick">onEraseOne</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="buttonScience">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+</resources>

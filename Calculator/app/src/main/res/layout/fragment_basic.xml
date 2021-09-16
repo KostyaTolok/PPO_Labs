@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BasicFragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/buttonRow"
+        android:layout_marginTop="2dp">
+        <Button
+            android:id="@+id/ButtonAllClear"
+            android:text="AC"
+            style="@style/buttonClear" />
+
+        <Button
+            android:id="@+id/buttonEraseOne"
+            android:text="E"
+            style="@style/buttonEraseOne" />
+
+        <Button
+            android:id="@+id/buttonRemainder"
+            android:text="%"
+            style="@style/buttonOperator"/>
+
+        <Button
+            android:id="@+id/buttonDivide"
+            android:text="÷"
+            style="@style/buttonOperator" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+        <Button
+            android:id="@+id/buttonSeven"
+            android:text="7"
+            style="@style/buttonDigit"/>
+
+        <Button
+            android:id="@+id/buttonEight"
+            android:text="8"
+            style="@style/buttonDigit"/>
+        <Button
+            android:id="@+id/buttonNine"
+            android:text="9"
+            style="@style/buttonDigit"/>
+        <Button
+            android:id="@+id/buttonMultiply"
+            android:text="×"
+            style="@style/buttonOperator"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            android:id="@+id/buttonFour"
+            android:text="4"
+            style="@style/buttonDigit"/>
+
+        <Button
+            android:id="@+id/buttonFive"
+            android:text="5"
+            style="@style/buttonDigit" />
+
+        <Button
+            android:id="@+id/buttonSix"
+            android:text="6"
+            style="@style/buttonDigit" />
+
+        <Button
+            android:id="@+id/buttonSubtract"
+            android:text="-"
+            style="@style/buttonOperator" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            android:id="@+id/buttonOne"
+            android:text="1"
+            style="@style/buttonDigit"/>
+
+        <Button
+            android:id="@+id/buttonTwo"
+            android:text="2"
+            style="@style/buttonDigit"/>
+
+        <Button
+            android:id="@+id/buttonThree"
+            android:text="3"
+            style="@style/buttonDigit"/>
+
+        <Button
+            android:id="@+id/buttonPlus"
+            android:text="+"
+            style="@style/buttonOperator"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            android:id="@+id/buttonSwitch"
+            android:text="S"
+            style="@style/buttonScience"/>
+
+        <Button
+            android:id="@+id/buttonZero"
+            android:text="0"
+            style="@style/buttonDigit"/>
+
+        <Button
+            android:id="@+id/buttonDecimal"
+            android:text="."
+            style="@style/buttonDecimal"/>
+
+        <Button
+            android:id="@+id/buttonEqual"
+            android:text="="
+            style="@style/buttonEqual"/>
+
+    </LinearLayout>
+
+</LinearLayout>
