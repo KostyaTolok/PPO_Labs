@@ -1,5 +1,43 @@
 <resources>
     <string name="app_name">Calculator</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="clearText">AC</string>
+    <string name="eraseText">⌫</string>
+    <string name="reminderText">%</string>
+    <string name="multiplyText">×</string>
+    <string name="divideText">÷</string>
+    <string name="nineText">9</string>
+    <string name="eightText">8</string>
+    <string name="sevenText">7</string>
+    <string name="sixText">6</string>
+    <string name="fiveText">5</string>
+    <string name="fourText">4</string>
+    <string name="threeText">3</string>
+    <string name="twoText">2</string>
+    <string name="oneText">1</string>
+    <string name="zeroText">0</string>
+    <string name="minusText">-</string>
+    <string name="plusText">+</string>
+    <string name="switchText">S</string>
+    <string name="decimalText">.</string>
+    <string name="equalText">=</string>
+
+    <string name="sinText">sin</string>
+    <string name="cosText">cos</string>
+    <string name="tanText">tan</string>
+    <string name="arcSinText">sin<sup><small>-1</small></sup></string>
+    <string name="arcCosText">cos<sup><small>-1</small></sup></string>
+    <string name="arcTanText">tan<sup><small>-1</small></sup></string>
+    <string name="expText">e<sup><small>x</small></sup></string>
+    <string name="lnText">ln</string>
+    <string name="logText">lg</string>
+    <string name="squareRootText">√</string>
+    <string name="absoluteValueText">|x|</string>
+    <string name="reverseXText">1/x</string>
+    <string name="factorialXText">x!</string>
+    <string name="piText">π</string>
+    <string name="eText">e</string>
+    <string name="leftParenthesisText">(</string>
+    <string name="rightParenthesisText">)</string>
+    <string name="xSquaredText">x<sup><small>2</small></sup></string>
+    <string name="xPowerYText">x<sup><small>y</small></sup></string>
 </resources>

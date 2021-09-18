@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScienceFragment"
+    android:orientation="vertical">
+    <LinearLayout
+        style="@style/buttonRow"
+        android:layout_marginTop="2dp">
+        <Button
+            android:id="@+id/ButtonSin"
+            android:text="@string/sinText"
+            style="@style/button.landscape"
+            android:onClick="onScience"/>
+
+        <Button
+            android:id="@+id/buttonCos"
+            android:text="@string/cosText"
+            style="@style/button.landscape"
+            android:onClick="onScience"/>
+
+        <Button
+            android:id="@+id/buttonTan"
+            android:text="@string/tanText"
+            style="@style/button.landscape"
+            android:onClick="onScience"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+        <Button
+            android:id="@+id/buttonArcSin"
+            android:text="@string/arcSinText"
+            style="@style/button.landscape"
+            android:onClick="onScience"/>
+
+        <Button
+            android:id="@+id/buttonArcCos"
+            android:text="@string/arcCosText"
+            style="@style/button.landscape"
+            android:onClick="onScience"/>
+        <Button
+            android:id="@+id/buttonArcTan"
+            android:text="@string/arcTanText"
+            style="@style/button.landscape"
+            android:onClick="onScience"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            android:id="@+id/buttonSqrt"
+            android:text="@string/squareRootText"
+            style="@style/button.landscape"
+            android:onClick="onScience"/>
+
+        <Button
+            android:id="@+id/buttonSquare"
+            android:text="@string/expText"
+            style="@style/button.landscape"
+            android:onClick="onScience"/>
+
+        <Button
+            android:id="@+id/buttonPower"
+            android:text="@string/xPowerYText"
+            style="@style/button.landscape"
+            android:onClick="onScience"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            android:id="@+id/buttonE"
+            android:text="@string/eText"
+            style="@style/button.landscape"
+            android:onClick="onScience"/>
+
+        <Button
+            android:id="@+id/buttonPi"
+            android:text="@string/piText"
+            style="@style/button.landscape"
+            android:onClick="onScience"/>
+
+        <Button
+            android:id="@+id/buttonLg"
+            android:text="@string/logText"
+            style="@style/button.landscape"
+            android:onClick="onScience"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            android:id="@+id/buttonPL"
+            android:text="@string/leftParenthesisText"
+            style="@style/button.landscape"
+            android:onClick="onScience"/>
+
+        <Button
+            android:id="@+id/buttonPR"
+            android:text="@string/rightParenthesisText"
+            style="@style/button.landscape"
+            android:onClick="onScience"/>
+
+        <Button
+            android:id="@+id/buttonLn"
+            android:text="@string/lnText"
+            style="@style/button.landscape"
+            android:onClick="onScience"/>
+
+    </LinearLayout>
+</LinearLayout>

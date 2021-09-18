@@ -3,23 +3,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BasicFragment"
+    tools:context=".ScienceFragment"
     android:orientation="vertical">
+    <LinearLayout
+        style="@style/buttonRow"
+        android:layout_marginTop="2dp">
+        <Button
+            android:id="@+id/buttonSin"
+            android:text="@string/sinText"
+            style="@style/button.portraitScience"
+            android:onClick="onScience"/>
+
+        <Button
+            android:id="@+id/buttonCos"
+            android:text="@string/cosText"
+            style="@style/button.portraitScience"
+            android:onClick="onScience"/>
+
+        <Button
+            android:id="@+id/buttonTan"
+            android:text="@string/tanText"
+            style="@style/button.portraitScience"
+            android:onClick="onScience"/>
+
+        <Button
+            android:id="@+id/buttonLeftP"
+            android:text="@string/leftParenthesisText"
+            style="@style/button"
+            android:onClick="onScience"/>
+
+        <Button
+            android:id="@+id/buttonRightP"
+            android:text="@string/rightParenthesisText"
+            style="@style/button"
+            android:onClick="onOperator"/>
+
+    </LinearLayout>
 
     <LinearLayout
         style="@style/buttonRow"
         android:layout_marginTop="2dp">
         <Button
+            android:id="@+id/buttonSquare"
+            android:text="@string/xPowerYText"
+            style="@style/button"
+            android:onClick="onScience"/>
+
+        <Button
             android:id="@+id/ButtonAllClear"
             android:text="@string/clearText"
-            style="@style/button"
+            style="@style/button.operator.portraitScience"
             android:textColor="@color/eraseColor"
             android:onClick="onClear" />
 
         <Button
             android:id="@+id/buttonEraseOne"
             android:text="@string/eraseText"
-            style="@style/button"
+            style="@style/button.operator"
             android:textColor="@color/eraseColor"
             android:onClick="onEraseOne" />
 
@@ -38,7 +78,14 @@
     </LinearLayout>
 
     <LinearLayout
-        style="@style/buttonRow">
+        style="@style/buttonRow"
+        android:layout_marginTop="2dp">
+        <Button
+            android:id="@+id/buttonSqrt"
+            android:text="@string/squareRootText"
+            style="@style/button"
+            android:onClick="onScience"/>
+
         <Button
             android:id="@+id/buttonSeven"
             android:text="@string/sevenText"
@@ -65,6 +112,12 @@
 
     <LinearLayout
         style="@style/buttonRow">
+
+        <Button
+            android:id="@+id/buttonLg"
+            android:text="@string/logText"
+            style="@style/button"
+            android:onClick="onScience"/>
 
         <Button
             android:id="@+id/buttonFour"
@@ -96,6 +149,12 @@
         style="@style/buttonRow">
 
         <Button
+            android:id="@+id/buttonLn"
+            android:text="@string/lnText"
+            style="@style/button"
+            android:onClick="onScience"/>
+
+        <Button
             android:id="@+id/buttonOne"
             android:text="@string/oneText"
             style="@style/button"
@@ -125,10 +184,16 @@
         style="@style/buttonRow">
 
         <Button
-            android:id="@+id/buttonSwitch"
+            android:id="@+id/buttonPL"
             android:text="@string/switchText"
             style="@style/button.operator"
-            android:onClick="onSwitchToScience"/>
+            android:onClick="onSwitchToBasic"/>
+
+        <Button
+            android:id="@+id/buttonE"
+            android:text="@string/eText"
+            style="@style/button"
+            android:onClick="onScience"/>
 
         <Button
             android:id="@+id/buttonZero"
@@ -149,5 +214,4 @@
             android:onClick="onEqual"/>
 
     </LinearLayout>
-
 </LinearLayout>

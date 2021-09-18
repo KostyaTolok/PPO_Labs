@@ -6,6 +6,6 @@
     <color name="grey_1">#D5D5D5</color>
     <color name="grey_2">#E6E5E5</color>
     <color name="grey_3">#323232</color>
-    <color name="operatorColor">#1C1C1C</color>
-    <color name="eraseColor">#1C1C1C</color>
+    <color name="operatorColor">#FF9800</color>
+    <color name="eraseColor">#F10B0B</color>
 </resources>
