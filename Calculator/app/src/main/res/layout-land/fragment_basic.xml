@@ -10,7 +10,7 @@
         style="@style/buttonRow"
         android:layout_marginTop="2dp">
         <Button
-            android:id="@+id/ButtonAllClear"
+            android:id="@+id/buttonAllClear"
             android:text="@string/clearText"
             style="@style/button.landscape"
             android:textColor="@color/eraseColor"

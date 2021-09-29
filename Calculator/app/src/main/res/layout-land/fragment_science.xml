@@ -9,7 +9,7 @@
         style="@style/buttonRow"
         android:layout_marginTop="2dp">
         <Button
-            android:id="@+id/ButtonSin"
+            android:id="@+id/buttonSin"
             android:text="@string/sinText"
             style="@style/button.landscape"
             android:onClick="onScience"/>
@@ -61,7 +61,7 @@
             android:onClick="onScience"/>
 
         <Button
-            android:id="@+id/buttonSquare"
+            android:id="@+id/buttonExp"
             android:text="@string/expText"
             style="@style/button.landscape"
             android:onClick="onScience"/>
@@ -102,13 +102,13 @@
         style="@style/buttonRow">
 
         <Button
-            android:id="@+id/buttonPL"
+            android:id="@+id/buttonLeftP"
             android:text="@string/leftParenthesisText"
             style="@style/button.landscape"
             android:onClick="onScience"/>
 
         <Button
-            android:id="@+id/buttonPR"
+            android:id="@+id/buttonRightP"
             android:text="@string/rightParenthesisText"
             style="@style/button.landscape"
             android:onClick="onScience"/>
