@@ -1,7 +1,9 @@
 package com.lab1.calculator
 
+import android.content.pm.ActivityInfo
 import android.content.pm.PackageManager
 import android.content.res.Configuration
+import android.content.res.Configuration.ORIENTATION_PORTRAIT
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -11,6 +13,7 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.print.PrintHelper.ORIENTATION_PORTRAIT
 import com.lab1.calculator.databinding.ActivityMainBinding
 import net.objecthunter.exp4j.ExpressionBuilder
 
@@ -43,6 +46,8 @@ class MainActivity : AppCompatActivity() {
         inputViewModel.currentIsFloat.observe(this, Observer {
             isFloat = it
         })
+
+
         val manager = this.packageManager
         val info = manager.getPackageInfo(this.packageName, PackageManager.GET_ACTIVITIES)
         setTitle("Calculator ${info.versionName}")
@@ -59,6 +64,15 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.flFragment, basicFragment)
             commit()
+        }
+    }
+
+    fun onSwitch(view: View){
+        val orientation = resources.configuration.orientation
+        requestedOrientation = if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+            ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+        } else{
+            ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         }
     }
 

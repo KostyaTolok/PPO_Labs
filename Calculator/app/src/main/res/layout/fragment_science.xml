@@ -11,32 +11,27 @@
         <Button
             android:id="@+id/buttonSin"
             android:text="@string/sinText"
-            style="@style/button.portraitScience"
-            android:onClick="onScience"/>
+            style="@style/button.portraitScience" />
 
         <Button
             android:id="@+id/buttonCos"
             android:text="@string/cosText"
-            style="@style/button.portraitScience"
-            android:onClick="onScience"/>
+            style="@style/button.portraitScience" />
 
         <Button
             android:id="@+id/buttonTan"
             android:text="@string/tanText"
-            style="@style/button.portraitScience"
-            android:onClick="onScience"/>
+            style="@style/button.portraitScience" />
 
         <Button
             android:id="@+id/buttonLeftP"
             android:text="@string/leftParenthesisText"
-            style="@style/button"
-            android:onClick="onScience"/>
+            style="@style/button" />
 
         <Button
             android:id="@+id/buttonRightP"
             android:text="@string/rightParenthesisText"
-            style="@style/button"
-            android:onClick="onOperator"/>
+            style="@style/button" />
 
     </LinearLayout>
 
@@ -46,8 +41,7 @@
         <Button
             android:id="@+id/buttonPower"
             android:text="@string/xPowerYText"
-            style="@style/button"
-            android:onClick="onScience"/>
+            style="@style/button" />
 
         <Button
             android:id="@+id/buttonAllClear"
@@ -60,20 +54,17 @@
             android:id="@+id/buttonEraseOne"
             android:text="@string/eraseText"
             style="@style/button.operator"
-            android:textColor="@color/eraseColor"
-            android:onClick="onEraseOne" />
+            android:textColor="@color/eraseColor" />
 
         <Button
             android:id="@+id/buttonRemainder"
             android:text="@string/reminderText"
-            style="@style/button.operator"
-            android:onClick="onOperator"/>
+            style="@style/button.operator" />
 
         <Button
             android:id="@+id/buttonDivide"
             android:text="@string/divideText"
-            style="@style/button.operator"
-            android:onClick="onOperator" />
+            style="@style/button.operator" />
 
     </LinearLayout>
 
@@ -83,30 +74,25 @@
         <Button
             android:id="@+id/buttonSqrt"
             android:text="@string/squareRootText"
-            style="@style/button"
-            android:onClick="onScience"/>
+            style="@style/button" />
 
         <Button
             android:id="@+id/buttonSeven"
             android:text="@string/sevenText"
-            style="@style/button"
-            android:onClick="onDigit"/>
+            style="@style/button" />
 
         <Button
             android:id="@+id/buttonEight"
             android:text="@string/eightText"
-            style="@style/button"
-            android:onClick="onDigit"/>
+            style="@style/button" />
         <Button
             android:id="@+id/buttonNine"
             android:text="@string/nineText"
-            style="@style/button"
-            android:onClick="onDigit"/>
+            style="@style/button" />
         <Button
             android:id="@+id/buttonMultiply"
             android:text="@string/multiplyText"
-            style="@style/button.operator"
-            android:onClick="onOperator"/>
+            style="@style/button.operator"/>
 
     </LinearLayout>
 
@@ -116,32 +102,27 @@
         <Button
             android:id="@+id/buttonLg"
             android:text="@string/logText"
-            style="@style/button"
-            android:onClick="onScience"/>
+            style="@style/button" />
 
         <Button
             android:id="@+id/buttonFour"
             android:text="@string/fourText"
-            style="@style/button"
-            android:onClick="onDigit"/>
+            style="@style/button" />
 
         <Button
             android:id="@+id/buttonFive"
             android:text="@string/fiveText"
-            style="@style/button"
-            android:onClick="onDigit" />
+            style="@style/button" />
 
         <Button
             android:id="@+id/buttonSix"
             android:text="@string/sixText"
-            style="@style/button"
-            android:onClick="onDigit" />
+            style="@style/button" />
 
         <Button
             android:id="@+id/buttonSubtract"
             android:text="@string/minusText"
-            style="@style/button.operator"
-            android:onClick="onOperator" />
+            style="@style/button.operator" />
 
     </LinearLayout>
 
@@ -151,26 +132,22 @@
         <Button
             android:id="@+id/buttonLn"
             android:text="@string/lnText"
-            style="@style/button"
-            android:onClick="onScience"/>
+            style="@style/button" />
 
         <Button
             android:id="@+id/buttonOne"
             android:text="@string/oneText"
-            style="@style/button"
-            android:onClick="onDigit"/>
+            style="@style/button" />
 
         <Button
             android:id="@+id/buttonTwo"
             android:text="@string/twoText"
-            style="@style/button"
-            android:onClick="onDigit"/>
+            style="@style/button" />
 
         <Button
             android:id="@+id/buttonThree"
             android:text="@string/threeText"
-            style="@style/button"
-            android:onClick="onDigit"/>
+            style="@style/button" />
 
         <Button
             android:id="@+id/buttonPlus"

@@ -11,20 +11,17 @@
         <Button
             android:id="@+id/buttonSin"
             android:text="@string/sinText"
-            style="@style/button.landscape"
-            android:onClick="onScience"/>
+            style="@style/button.landscape" />
 
         <Button
             android:id="@+id/buttonCos"
             android:text="@string/cosText"
-            style="@style/button.landscape"
-            android:onClick="onScience"/>
+            style="@style/button.landscape" />
 
         <Button
             android:id="@+id/buttonTan"
             android:text="@string/tanText"
-            style="@style/button.landscape"
-            android:onClick="onScience"/>
+            style="@style/button.landscape" />
 
 
 
@@ -35,19 +32,16 @@
         <Button
             android:id="@+id/buttonArcSin"
             android:text="@string/arcSinText"
-            style="@style/button.landscape"
-            android:onClick="onScience"/>
+            style="@style/button.landscape" />
 
         <Button
             android:id="@+id/buttonArcCos"
             android:text="@string/arcCosText"
-            style="@style/button.landscape"
-            android:onClick="onScience"/>
+            style="@style/button.landscape" />
         <Button
             android:id="@+id/buttonArcTan"
             android:text="@string/arcTanText"
-            style="@style/button.landscape"
-            android:onClick="onScience"/>
+            style="@style/button.landscape" />
 
     </LinearLayout>
 
@@ -57,20 +51,17 @@
         <Button
             android:id="@+id/buttonSqrt"
             android:text="@string/squareRootText"
-            style="@style/button.landscape"
-            android:onClick="onScience"/>
+            style="@style/button.landscape" />
 
         <Button
             android:id="@+id/buttonExp"
             android:text="@string/expText"
-            style="@style/button.landscape"
-            android:onClick="onScience"/>
+            style="@style/button.landscape" />
 
         <Button
             android:id="@+id/buttonPower"
             android:text="@string/xPowerYText"
-            style="@style/button.landscape"
-            android:onClick="onScience"/>
+            style="@style/button.landscape" />
 
 
     </LinearLayout>
@@ -81,20 +72,17 @@
         <Button
             android:id="@+id/buttonE"
             android:text="@string/eText"
-            style="@style/button.landscape"
-            android:onClick="onScience"/>
+            style="@style/button.landscape"/>
 
         <Button
             android:id="@+id/buttonPi"
             android:text="@string/piText"
-            style="@style/button.landscape"
-            android:onClick="onScience"/>
+            style="@style/button.landscape"/>
 
         <Button
             android:id="@+id/buttonLg"
             android:text="@string/logText"
-            style="@style/button.landscape"
-            android:onClick="onScience"/>
+            style="@style/button.landscape"/>
 
     </LinearLayout>
 
@@ -104,20 +92,17 @@
         <Button
             android:id="@+id/buttonLeftP"
             android:text="@string/leftParenthesisText"
-            style="@style/button.landscape"
-            android:onClick="onScience"/>
+            style="@style/button.landscape"/>
 
         <Button
             android:id="@+id/buttonRightP"
             android:text="@string/rightParenthesisText"
-            style="@style/button.landscape"
-            android:onClick="onScience"/>
+            style="@style/button.landscape"/>
 
         <Button
             android:id="@+id/buttonLn"
             android:text="@string/lnText"
-            style="@style/button.landscape"
-            android:onClick="onScience"/>
+            style="@style/button.landscape"/>
 
     </LinearLayout>
 </LinearLayout>

@@ -14,7 +14,8 @@ import net.objecthunter.exp4j.ExpressionBuilder
 
 class BasicFragment : Fragment(R.layout.fragment_basic) {
     private val inputViewModel: InputViewModel by activityViewModels()
-    lateinit var binding: FragmentBasicBinding
+    private var _binding: FragmentBasicBinding? = null
+    private val binding get() = _binding!!
     private var isFloat = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,8 +29,8 @@ class BasicFragment : Fragment(R.layout.fragment_basic) {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentBasicBinding.inflate(inflater)
+    ): View {
+        _binding = FragmentBasicBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -63,6 +64,12 @@ class BasicFragment : Fragment(R.layout.fragment_basic) {
         binding.buttonRemainder.setOnClickListener { onOperator(it) }
         binding.buttonEqual.setOnClickListener { onEqual(it) }
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
 
     private fun onDigit(view: View) {
         val inputText = inputViewModel.currentInput.value

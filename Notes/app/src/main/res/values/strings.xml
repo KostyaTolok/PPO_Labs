@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="searchHint">Search</string>
+    <string name="titleHint">Title</string>
+    <string name="textHint">Text</string>
+    <string name="addButtonDesc">Add Note</string>
+    <string name="deleteButtonDesc">Delete Note</string>
+</resources>

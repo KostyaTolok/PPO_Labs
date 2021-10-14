@@ -13,27 +13,23 @@
             android:id="@+id/buttonAllClear"
             android:text="@string/clearText"
             style="@style/button"
-            android:textColor="@color/eraseColor"
-            android:onClick="onClear" />
+            android:textColor="@color/eraseColor" />
 
         <Button
             android:id="@+id/buttonEraseOne"
             android:text="@string/eraseText"
             style="@style/button"
-            android:textColor="@color/eraseColor"
-            android:onClick="onEraseOne" />
+            android:textColor="@color/eraseColor"/>
 
         <Button
             android:id="@+id/buttonRemainder"
             android:text="@string/reminderText"
-            style="@style/button.operator"
-            android:onClick="onOperator"/>
+            style="@style/button.operator" />
 
         <Button
             android:id="@+id/buttonDivide"
             android:text="@string/divideText"
-            style="@style/button.operator"
-            android:onClick="onOperator" />
+            style="@style/button.operator" />
 
     </LinearLayout>
 
@@ -42,24 +38,20 @@
         <Button
             android:id="@+id/buttonSeven"
             android:text="@string/sevenText"
-            style="@style/button"
-            android:onClick="onDigit"/>
+            style="@style/button" />
 
         <Button
             android:id="@+id/buttonEight"
             android:text="@string/eightText"
-            style="@style/button"
-            android:onClick="onDigit"/>
+            style="@style/button" />
         <Button
             android:id="@+id/buttonNine"
             android:text="@string/nineText"
-            style="@style/button"
-            android:onClick="onDigit"/>
+            style="@style/button" />
         <Button
             android:id="@+id/buttonMultiply"
             android:text="@string/multiplyText"
-            style="@style/button.operator"
-            android:onClick="onOperator"/>
+            style="@style/button.operator" />
 
     </LinearLayout>
 
@@ -69,26 +61,22 @@
         <Button
             android:id="@+id/buttonFour"
             android:text="@string/fourText"
-            style="@style/button"
-            android:onClick="onDigit"/>
+            style="@style/button" />
 
         <Button
             android:id="@+id/buttonFive"
             android:text="@string/fiveText"
-            style="@style/button"
-            android:onClick="onDigit" />
+            style="@style/button" />
 
         <Button
             android:id="@+id/buttonSix"
             android:text="@string/sixText"
-            style="@style/button"
-            android:onClick="onDigit" />
+            style="@style/button" />
 
         <Button
             android:id="@+id/buttonSubtract"
             android:text="@string/minusText"
-            style="@style/button.operator"
-            android:onClick="onOperator" />
+            style="@style/button.operator" />
 
     </LinearLayout>
 
@@ -98,26 +86,22 @@
         <Button
             android:id="@+id/buttonOne"
             android:text="@string/oneText"
-            style="@style/button"
-            android:onClick="onDigit"/>
+            style="@style/button" />
 
         <Button
             android:id="@+id/buttonTwo"
             android:text="@string/twoText"
-            style="@style/button"
-            android:onClick="onDigit"/>
+            style="@style/button" />
 
         <Button
             android:id="@+id/buttonThree"
             android:text="@string/threeText"
-            style="@style/button"
-            android:onClick="onDigit"/>
+            style="@style/button" />
 
         <Button
             android:id="@+id/buttonPlus"
             android:text="@string/plusText"
-            style="@style/button.operator"
-            android:onClick="onOperator"/>
+            style="@style/button.operator" />
 
     </LinearLayout>
 
@@ -128,25 +112,22 @@
             android:id="@+id/buttonSwitch"
             android:text="@string/switchText"
             style="@style/button.operator"
-            android:onClick="onSwitchToScience"/>
+            android:onClick="onSwitch"/>
 
         <Button
             android:id="@+id/buttonZero"
             android:text="@string/zeroText"
-            style="@style/button"
-            android:onClick="onDigit"/>
+            style="@style/button" />
 
         <Button
             android:id="@+id/buttonDecimal"
             android:text="@string/decimalText"
-            style="@style/button"
-            android:onClick="onDecimalPoint"/>
+            style="@style/button" />
 
         <Button
             android:id="@+id/buttonEqual"
             android:text="@string/equalText"
-            style="@style/button.operator"
-            android:onClick="onEqual"/>
+            style="@style/button.operator" />
 
     </LinearLayout>
 
