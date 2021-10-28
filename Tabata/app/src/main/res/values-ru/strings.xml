@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tabata</string>
+
+    <string name="addTimerDesc">Add Timer</string>
+    <string name="saveTimerDesc">Save Timer</string>
+    <string name="cancelDesc">Cancel</string>
+    <string name="nameTint">Name</string>
+    <string name="editDesc">Edit</string>
+    <string name="deleteDesc">Delete</string>
+    <string name="nameHint">Имя таймера</string>
+
+    <string name="warm_up">Разминка</string>
+    <string name="work">Упражнения</string>
+    <string name="rest">Отдых</string>
+    <string name="cooldown">Заминка</string>
+    <string name="repeats">Повторения</string>
+    <string name="cycles">Циклы</string>
+    <string name="color">Цвет</string>
+
+    <string name="complete">Завершено</string>
+
+    <string name="title_activity_settings">Настройки</string>
+    <string name="appearance_header">Вид</string>
+    <string name="lang_header">Язык</string>
+
+    <string name="theme_title">Темная тема</string>
+    <string name="text_size_title">Размер текста</string>
+
+    <string name="lang_title">Язык</string>
+    <string name="lang_action_title">Выбрать язык</string>
+
+    <string name="size_small">Маленький</string>
+    <string name="size_medium">Средний</string>
+    <string name="size_large">Большой</string>
+
+    <string name="small" translatable="false">small</string>
+    <string name="medium" translatable="false">medium</string>
+    <string name="large" translatable="false">large</string>
+
+    <string name="russian">Русский</string>
+    <string name="english">Английский</string>
+
+    <string name="ru" translatable="false">ru</string>
+    <string name="eng" translatable="false">eng</string>
+
+
+    <string name="settings_item">Настройки</string>
+</resources>

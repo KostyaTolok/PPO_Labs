@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/timerItemView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5sp"
+        android:adjustViewBounds="true"
+        android:padding="5sp"
+        android:scaleType="fitXY"
+        app:cardPreventCornerOverlap="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="10sp"
+        app:cardElevation="5sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/timerName"
+                    android:layout_width="239dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingStart="15sp"
+                    android:paddingTop="10sp"
+                    android:paddingBottom="5sp"
+                    android:text="@string/nameTint"
+                    android:textColor="@color/textColor"
+                    android:textSize="25sp"
+                    tools:ignore="RtlSymmetry" />
+
+                <ImageButton
+                    android:id="@+id/editButton"
+                    style="@style/Widget.AppCompat.ImageButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5sp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="0.1"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/editDesc"
+                    android:src="@drawable/ic_settings" />
+
+                <ImageButton
+                    android:id="@+id/deleteButton"
+                    style="@style/Widget.AppCompat.ImageButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="5sp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="0.1"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/deleteDesc"
+                    android:src="@drawable/ic_delete" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

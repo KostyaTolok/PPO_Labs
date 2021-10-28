@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "Notes")
-class Note(
+data class Note(
     @ColumnInfo(name = "title") var title: String,
     @ColumnInfo(name = "date_time") var dateTime: String,
     @ColumnInfo(name = "text") var text: String? = ""
@@ -13,7 +13,7 @@ class Note(
     @PrimaryKey(autoGenerate = true)
     var id: Int? = null
 
-    override fun toString(): String {
-        return "$title: $dateTime"
-    }
+//    override fun toString(): String {
+//        return "$title: $dateTime"
+//    }
 }

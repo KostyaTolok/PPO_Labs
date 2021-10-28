@@ -53,9 +53,7 @@ class HomeFragment : BaseFragment() {
         launch {
             context?.let {
                 notes = NotesDatabase.getDatabase(it).noteDao().getAllNotes()
-
                 adapter.setNotes(notes as ArrayList<Note>)
-
                 recycler_view.adapter = adapter
             }
         }
@@ -75,7 +73,7 @@ class HomeFragment : BaseFragment() {
 
             override fun onQueryTextChange(p0: String?): Boolean {
 
-                var foundNotes = ArrayList<Note>()
+                val foundNotes = ArrayList<Note>()
                 if (notes != null && p0 !=null) {
 
                     for (note in notes!!) {

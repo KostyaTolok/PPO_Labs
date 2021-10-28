@@ -18,7 +18,7 @@ abstract class NotesDatabase : RoomDatabase() {
         fun getDatabase(context: Context): NotesDatabase {
             if (notesDatabase == null) {
                 notesDatabase = Room.databaseBuilder(
-                    context, NotesDatabase::class.java,
+                    context.applicationContext, NotesDatabase::class.java,
                     "notes.db"
                 ).build()
             }
