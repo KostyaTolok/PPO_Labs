@@ -14,7 +14,6 @@ import com.zeugmasolutions.localehelper.Locales
 import java.util.*
 
 class MainActivity : LocaleAwareCompatActivity() {
-    lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,17 +41,6 @@ class MainActivity : LocaleAwareCompatActivity() {
         startActivity(intent)
         finish()
         return super.onOptionsItemSelected(item)
-    }
-
-    private fun setSharedPreferences(){
-        sharedPreferences = getSharedPreferences("Preferences", MODE_PRIVATE)
-
-        if (sharedPreferences.getBoolean("first", true))
-            Locale.setDefault(Locale("en"))
-        sharedPreferences.edit().putBoolean("first", false).apply()
-
-        val darkTheme: Boolean = sharedPreferences.getBoolean("dark_theme", false)
-        updateTheme(darkTheme)
     }
 
     private fun updateTheme(darkTheme: Boolean) {

@@ -38,32 +38,6 @@
         tools:layout_editor_absoluteY="30dp" />
 
 
-    <TextView
-        android:id="@+id/prev_text"
-        android:layout_width="155dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="80dp"
-        android:gravity="center"
-        android:text="Rest"
-        android:textColor="@color/textColor"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/next_text"
-        android:layout_width="161dp"
-        android:layout_height="42dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="80dp"
-        android:gravity="center"
-        android:text="Work"
-        android:textColor="@color/textColor"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
     <ImageView
         android:id="@+id/start_stop_btn"
         android:layout_width="wrap_content"
