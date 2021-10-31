@@ -153,9 +153,9 @@ class NewsListFragment : Fragment() {
                     eventType = xmlParser.next()
                 }
             } catch (e: XmlPullParserException) {
-                e.printStackTrace()
+                Log.e(tag, e.toString())
             } catch (e: IOException) {
-                e.printStackTrace()
+                Log.e(tag, e.toString())
             } catch (e: Exception) {
                 Log.e(tag, e.toString())
             }
