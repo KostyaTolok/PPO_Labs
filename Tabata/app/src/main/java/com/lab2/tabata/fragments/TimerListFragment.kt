@@ -59,6 +59,15 @@ class TimerListFragment : BaseFragment() {
         addTimerButton.setOnClickListener {
             replaceAndAddToBackStackFragment(TimerEditFragment.newInstance())
         }
+
+        clearButton.setOnClickListener{
+            launch {
+                context?.let {
+                    TimersDatabase.getDatabase(it).timerDao().clearTimers()
+                }
+                replaceFragment(newInstance())
+            }
+        }
     }
 
     private val onEditClicklistener = object : TimersAdapter.OnItemClickListener {

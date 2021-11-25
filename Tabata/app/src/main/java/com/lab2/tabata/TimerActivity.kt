@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import androidx.lifecycle.MutableLiveData
 import com.lab2.tabata.data.Timer
-import com.lab2.tabata.databinding.ActivityTimerBinding
 import com.zeugmasolutions.localehelper.LocaleAwareCompatActivity
 import kotlinx.android.synthetic.main.activity_timer.*
 
@@ -56,69 +55,64 @@ class TimerActivity : LocaleAwareCompatActivity() {
     var countDownTimer: CountDownTimer? = null
     private var timeValue: Long = 0
 
-    private var statesCount = 0
-
     var isStarted: Boolean = false
 
-    var statesNames = arrayListOf<String>()
-    var statesTimes = arrayListOf<Int>()
+    var stateNames = arrayListOf<String>()
+    var stateTimes = arrayListOf<Int>()
 
     fun setTimer(timer: Timer) {
         this.timer = timer
 
-        statesCount = timer.cycles * (timer.repeats * 2 + 1)
         timeValue = (timer.warmUpTime * 1000).toLong()
-        timeText.value = getTime(timer.warmUpTime)
+        timeText.value = getTimeText(timer.warmUpTime)
         currentState.value = resources.getString(R.string.warm_up)
-        currentStateIndex = 2
+        currentStateIndex = 1
 
-        statesTimes.add(timer.warmUpTime)
-
-        statesNames.add(resources.getString(R.string.warm_up))
-        statesTimes.add(timer.warmUpTime)
+        stateNames.add(resources.getString(R.string.warm_up))
+        stateTimes.add(timer.warmUpTime)
 
         for (i in 0 until timer.cycles) {
             for (j in 0 until timer.repeats) {
-                statesNames.add(resources.getString(R.string.work))
-                statesNames.add(resources.getString(R.string.rest))
-                statesTimes.add(timer.workTime)
-                statesTimes.add(timer.restTime)
+                stateNames.add(resources.getString(R.string.work))
+                stateNames.add(resources.getString(R.string.rest))
+                stateTimes.add(timer.workTime)
+                stateTimes.add(timer.restTime)
             }
 
-            statesNames.add(resources.getString(R.string.cooldown))
-            statesTimes.add(timer.cooldownTime)
+            stateNames.add(resources.getString(R.string.cooldown))
+            stateTimes.add(timer.cooldownTime)
         }
-        statesNames.add(resources.getString(R.string.complete))
+        stateNames.add(resources.getString(R.string.complete))
     }
 
     fun start() {
         isStarted = true
         countDownTimer = object : CountDownTimer(timeValue, 1000) {
+
             override fun onFinish() {
 
                 if (currentStateIndex < 1) {
-                    currentStateIndex = 1
-                } else if (currentStateIndex - 2 > currentStateIndex) {
+                    currentStateIndex = 0
+                } else if (currentStateIndex > stateNames.size - 1) {
                     return
                 }
 
-                if (currentStateIndex - 2 == statesCount) {
+                if (currentStateIndex == stateNames.size - 1) {
                     currentState.value = resources.getString(R.string.complete)
 
                     currentStateIndex += 1
                 } else {
-                    currentState.value = statesNames[currentStateIndex]
+                    currentState.value = stateNames[currentStateIndex]
 
-
-                    timeValue = statesTimes[currentStateIndex].toLong() * 1000
-                    timeText.value = getTimeText(timeValue)
+                    timeValue = stateTimes[currentStateIndex].toLong() * 1000
+                    timeText.value = getTimeText(timeValue.toInt()/1000)
                     this@TimerActivity.start()
                     currentStateIndex += 1
                 }
             }
 
             override fun onTick(millisUntilFinished: Long) {
-                timeText.value = getTimeText(timeValue)
+                timeText.value = getTimeText(timeValue.toInt()/1000)
                 timeValue -= 1000
             }
         }.start()
@@ -142,18 +136,24 @@ class TimerActivity : LocaleAwareCompatActivity() {
         countDownTimer?.cancel()
     }
 
-    private fun getTimeText(time: Long) = getTime(time.toInt() / 1000)
+    private fun getTimeText(time: Int): String {
+       return getMinutes(time) + ":" + getSeconds(time)
+    }
 
-    private fun getTime(time: Int): String = (getMinutes(time) + ":" + getSec(time))
+    private fun getMinutes(time: Int): String {
+        return addZero(time / 60)
+    }
 
-    private fun getMinutes(time: Int): String = addZero(time / 60)
+    private fun getSeconds(time: Int): String {
+        return addZero(time - (time / 60) * 60)
+    }
 
-    private fun getSec(time: Int): String = addZero(time - (time / 60).toInt() * 60)
-
-    private fun addZero(time: Int): String = if (time < 10) {
-        "0$time"
-    } else {
-        "$time"
+    private fun addZero(time: Int): String {
+        return if (time < 10) {
+            "0$time"
+        } else {
+            "$time"
+        }
     }
 
     override fun onBackPressed() {

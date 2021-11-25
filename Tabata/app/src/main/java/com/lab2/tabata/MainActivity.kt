@@ -42,9 +42,4 @@ class MainActivity : LocaleAwareCompatActivity() {
         finish()
         return super.onOptionsItemSelected(item)
     }
-
-    private fun updateTheme(darkTheme: Boolean) {
-        if (darkTheme) AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-        else AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-    }
 }

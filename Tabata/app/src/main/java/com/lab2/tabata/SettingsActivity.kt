@@ -5,6 +5,7 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.DisplayMetrics
+import android.util.TypedValue
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
@@ -25,6 +26,7 @@ class SettingsActivity : LocaleAwareCompatActivity() {
 
         sharedPreferences = getSharedPreferences("Preferences", MODE_PRIVATE);
         settingsFragment = SettingsFragment()
+
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.settings_frame, settingsFragment)
@@ -35,49 +37,49 @@ class SettingsActivity : LocaleAwareCompatActivity() {
     override fun onResume() {
 
         val themePreference = settingsFragment.findPreference<Preference>("dark_theme")!!
+
         themePreference.onPreferenceChangeListener =
-            Preference.OnPreferenceChangeListener { _, newValue ->
+            Preference.OnPreferenceChangeListener { _, preference ->
 
-                sharedPreferences.edit().putBoolean("dark_theme", newValue as Boolean).apply()
-                TimerApp.updateTheme(newValue)
+                sharedPreferences.edit().putBoolean("dark_theme", preference as Boolean).apply()
+                TimerApp.updateTheme(preference)
                 true
             }
 
-        val fontSizePreference = settingsFragment.findPreference<ListPreference>("text_size")!!
-        fontSizePreference.onPreferenceChangeListener =
-            Preference.OnPreferenceChangeListener { _, newValue ->
+        val localePreference = settingsFragment.findPreference<Preference>("language")!!
 
-                var sizeCoef = 0f
-                when (newValue as String) {
-                    "small" -> sizeCoef = 0.85f
-                    "medium" -> sizeCoef = 1.0f
-                    "large" -> sizeCoef = 1.15f
-                }
-                resources.configuration.fontScale = sizeCoef
-                resources.displayMetrics.scaledDensity = resources.configuration.fontScale * resources.displayMetrics.density
-                baseContext.resources.updateConfiguration(resources.configuration, DisplayMetrics())
-                finish()
-                startActivity(Intent(this, this::class.java))
-                true
-            }
-
-        val localePreference = settingsFragment.findPreference<Preference>("lang")!!
         localePreference.onPreferenceChangeListener =
-            Preference.OnPreferenceChangeListener { _, newValue ->
+            Preference.OnPreferenceChangeListener { _, preference ->
 
-                if(newValue as String == "ru")
+                if(preference as String == "ru")
                     updateLocale(Locales.Russian)
                 else
                     updateLocale(Locales.English)
                 true
             }
 
-        super.onResume()
-    }
+        val fontSizePreference = settingsFragment.findPreference<ListPreference>("font_size")!!
 
-    private fun updateTheme(darkTheme: Boolean) {
-        if (darkTheme) AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-        else AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        fontSizePreference.onPreferenceChangeListener =
+            Preference.OnPreferenceChangeListener { _, preference ->
+
+                val scaleCoefficient = TypedValue()
+                when (preference as String) {
+                    "small" -> resources.getValue(R.dimen.smallScaleCoefficient, scaleCoefficient, true)
+                    "medium" -> resources.getValue(R.dimen.mediumScaleCoefficient, scaleCoefficient, true)
+                    "large" -> resources.getValue(R.dimen.largeScaleCoefficient, scaleCoefficient, true)
+                }
+
+                resources.configuration.fontScale = scaleCoefficient.float
+                resources.displayMetrics.scaledDensity = resources.configuration.fontScale * resources.displayMetrics.density
+                baseContext.resources.configuration.updateFrom(resources.configuration)
+
+                finish()
+                startActivity(Intent(this, this::class.java))
+                true
+            }
+
+        super.onResume()
     }
 
     override fun onBackPressed() {

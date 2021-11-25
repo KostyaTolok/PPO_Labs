@@ -19,7 +19,7 @@ class TimerInputFilter : InputFilter {
             if (Integer.parseInt(input) > 59 || Integer.parseInt(input) < 0) {
                 return ""
             }
-        } catch (nfe: NumberFormatException) {
+        } catch (ex: NumberFormatException) {
             return "00"
         }
 

@@ -4,6 +4,7 @@
 
     <string name="addTimerDesc">Add Timer</string>
     <string name="saveTimerDesc">Save Timer</string>
+    <string name="clearDesc">Clear Timers</string>
     <string name="cancelDesc">Cancel</string>
     <string name="nameTint">Name</string>
     <string name="editDesc">Edit</string>

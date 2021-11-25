@@ -4,7 +4,6 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.text.InputFilter
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,7 +16,6 @@ import com.lab2.tabata.data.Timer
 import com.lab2.tabata.data.TimersDatabase
 import com.lab2.tabata.filters.TimerInputFilter
 import kotlinx.android.synthetic.main.fragment_timer_edit.*
-import kotlinx.android.synthetic.main.rv_item_timer.*
 import kotlinx.coroutines.launch
 
 class TimerEditFragment : BaseFragment() {
@@ -57,13 +55,13 @@ class TimerEditFragment : BaseFragment() {
 
                     timer_title.setText(timer.name, TextView.BufferType.EDITABLE)
                     warm_up_min.setText(getMinutes(timer.warmUpTime))
-                    warm_up_s.setText(getSec(timer.warmUpTime))
+                    warm_up_s.setText(getSeconds(timer.warmUpTime))
                     work_min.setText(getMinutes(timer.workTime))
-                    work_s.setText(getSec(timer.workTime))
+                    work_s.setText(getSeconds(timer.workTime))
                     rest_min.setText(getMinutes(timer.restTime))
-                    rest_s.setText(getSec(timer.restTime))
+                    rest_s.setText(getSeconds(timer.restTime))
                     cooldown_min.setText(getMinutes(timer.cooldownTime))
-                    cooldown_s.setText(getSec(timer.cooldownTime))
+                    cooldown_s.setText(getSeconds(timer.cooldownTime))
                     repeats.setText(timer.repeats.toString())
                     cycles.setText(timer.cycles.toString())
                     select_color.setBackgroundColor(Color.parseColor(timer.color))
@@ -83,7 +81,7 @@ class TimerEditFragment : BaseFragment() {
         }
 
         select_color.setOnClickListener {
-            createColorPickerDialog((select_color.background as ColorDrawable).color)
+            createColorPicker((select_color.background as ColorDrawable).color)
         }
     }
 
@@ -117,17 +115,23 @@ class TimerEditFragment : BaseFragment() {
         }
     }
 
-    private fun getMinutes(time: Int): String = addZero(time / 60)
-
-    private fun getSec(time: Int): String = addZero(time - (time / 60) * 60)
-
-    private fun addZero(time: Int): String = if (time < 10) {
-        "0$time"
-    } else {
-        "$time"
+    private fun getMinutes(time: Int): String {
+        return addZero(time / 60)
     }
 
-    private fun createColorPickerDialog(defaultColor: Int){
+    private fun getSeconds(time: Int): String {
+        return addZero(time - (time / 60) * 60)
+    }
+
+    private fun addZero(time: Int): String {
+        return if (time < 10) {
+            "0$time"
+        } else {
+            "$time"
+        }
+    }
+
+    private fun createColorPicker(defaultColor: Int){
         context?.let {
             MaterialColorPickerDialog
                 .Builder(it)
